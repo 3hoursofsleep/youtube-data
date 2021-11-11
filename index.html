@@ -15,8 +15,8 @@
     import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
     import define from "https://api.observablehq.com/@wattslab/youtube-politics-over-time.js?v=3";
     new Runtime().module(define, name => {
-      if (name === "video_up") return new Inspector(document.querySelector("#observablehq-video_up-d7af79e5"));
       if (name === "chart") return new Inspector(document.querySelector("#observablehq-chart-d7af79e5"));
+      if (name === "video_up") return new Inspector(document.querySelector("#observablehq-video_up-d7af79e5"));
     });
   </script>
 </html>
