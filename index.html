@@ -5,14 +5,18 @@
   </head>
   <body>
     <h1>YouTube Politics</h1>
-    <div id="observablehq-chart-833b2134">Loading...</div>
+    <h2>2B: View durations over time</h2>
+    <div id="observablehq-video_up-d7af79e5">Loading...</div>
+    <h2>Server Status: YT videos crawled per day</h2>
+    <div id="observablehq-chart-d7af79e5">Loading...</div>
   </body>
 
   <script type="module">
     import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
-    import define from "https://api.observablehq.com/@wattslab/youtube-politics-over-time@584.js?v=3";
+    import define from "https://api.observablehq.com/@wattslab/youtube-politics-over-time.js?v=3";
     new Runtime().module(define, name => {
-      if (name === "chart") return new Inspector(document.querySelector("#observablehq-chart-833b2134"));
+      if (name === "video_up") return new Inspector(document.querySelector("#observablehq-video_up-d7af79e5"));
+      if (name === "chart") return new Inspector(document.querySelector("#observablehq-chart-d7af79e5"));
     });
   </script>
 </html>
